@@ -1,7 +1,7 @@
 require('spec_helper')
 
 describe(Store) do
-  it('has shoe stores associated with it') do
+  it('has shoe brands associated with it') do
     store = Store.create({:name => 'Foot Locker'})
     brand1 = Brand.create({:name => 'Puma'})
     brand2 = Brand.create({:name => 'Nike'})
