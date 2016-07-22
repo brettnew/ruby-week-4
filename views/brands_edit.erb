@@ -1,0 +1,14 @@
+<h1>Rename <%= @brand.name %></h1>
+
+<form action="/brands/<%= @brand.id %>/edit" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label for="brand_name">Change Brand Name</label>
+  <input type="text" name="brand_name" id="brand_name">
+  <button type="submit">Update Brand</button>
+</form>
+
+<form action="/brands/<%= @brand.id %>/edit" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <h5>Delete <%= @brand.name %></h5>
+  <button type="submit">Delete</button>
+</form>
