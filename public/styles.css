@@ -1,0 +1,17 @@
+body {
+  background: url('../img/intro-page.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.jumbotron {
+  text-align: center;
+  padding-left: 100%
+  padding-right: 100%
+}
+
+h2 {
+  font-size: 3.25em;
+}
