@@ -12,14 +12,3 @@
   <br>
   <p><a href="/brands">Add brands to database</a></p>
 <% end %>
-<h4>Assign stores to this brand:</h4>
-<form action="/brands/<%= @brand.id %>" method="post">
-<input type="hidden" name="_method" value="patch">
-<label for="brand_choose">Choose Stores:</label>
-<br>
-  <% @stores.each() do |store| %>
-  <input type="checkbox" name="store_id[]" id ='store_id[]' value="<%= store.id %>"> <strong><%= store.name %></strong><br>
-  <% end %>
-  <br>
-  <button type="submit">Add Stores</button>
-</form>

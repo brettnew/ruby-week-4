@@ -10,14 +10,6 @@ describe('shoe store functionality through application', {:type => :feature}) do
     expect(page).to have_content('Foot Locker')
   end
 
-  it('allows user to create shoe brand') do
-    visit('/')
-    click_link('View All Shoe Brands')
-    fill_in('brand_name', :with => 'Nike')
-    click_button('Add Brand')
-    expect(page).to have_content ('Nike')
-  end
-
   it('allows a user to view details for single shoe store') do
     Store.create({:name => 'Foot Locker'})
     visit('/stores')
