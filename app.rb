@@ -48,10 +48,6 @@ get('/stores/:id') do
   erb(:store)
 end
 
-get('/brands/:id') do
-
-end
-
 patch('/stores/:id') do
   new_brand_ids = params.fetch('brand_id')
   @store = Store.find(params.fetch('id').to_i)
@@ -64,4 +60,24 @@ patch('/stores/:id') do
   end
   @store.update({:brand_ids => brand_ids_array})
   redirect back
+end
+
+get('/stores/:id/edit') do
+  @store = Store.find(params.fetch('id').to_i)
+  erb(:stores_edit)
+end
+
+patch('/stores/:id/edit') do
+  name = params.fetch('store_name')
+  @store = Store.find(params.fetch('id').to_i)
+  @store.update({:name => name})
+  @stores = Store.all
+  redirect('/stores')
+end
+
+delete('/stores/:id/edit') do
+  @store = Store.find(params.fetch('id').to_i)
+  @store.destroy()
+  @stores = Store.all
+  redirect('/stores')
 end
