@@ -1,5 +1,6 @@
-<h2><%= @store.name %> Inventory</h2>
-<hr>
+<div class="jumbotron">
+  <h2><%= @store.name %> Inventory</h2>
+</div>
 <h3><%= @store.name %> carries the following brands:</h3>
 <% if @store.brands.any? %>
   <ul>

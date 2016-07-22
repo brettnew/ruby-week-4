@@ -8,10 +8,19 @@ body {
 
 .jumbotron {
   text-align: center;
-  padding-left: 100%
-  padding-right: 100%
+  width: 100%;
+  padding: 80px;
+  color: #E0F1FB;
+  background-color: #042ABB;
+  border-bottom: 40px;
+  margin-bottom: 50px;
+}
+
+.jumbotron h2 {
+  font-size: 3.25em;
 }
 
 h2 {
-  font-size: 3.25em;
+ font-family: 'Lato', sans-serif;
+
 }
