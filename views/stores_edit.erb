@@ -1,14 +1,15 @@
-<h1>Rename <%= @store.name %></h1>
-
-<form action="/stores/<%= @store.id %>/edit" method="post">
-  <input type="hidden" name="_method" value="patch">
-  <label for="store_name">Rename Store</label>
-  <input type="text" name="store_name" id="store_name">
-  <button type="submit">Update Name</button>
-</form>
-
-<form action="/stores/<%= @store.id %>/edit" method="post">
-  <input type="hidden" name="_method" value="delete">
-  <h5>Delete <%= @store.name %></h5>
-  <button type="submit">Delete</button>
-</form>
+<div class="container">
+  <h1>Rename <%= @store.name %></h1>
+  <form action="/stores/<%= @store.id %>/edit" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <label for="store_name">Rename Store</label>
+    <input type="text" name="store_name" id="store_name">
+    <br>
+    <button type="submit">Update Name</button>
+  </form>
+  <form action="/stores/<%= @store.id %>/edit" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <h5>Delete <%= @store.name %></h5>
+    <button type="submit">Delete</button>
+  </form>
+</div>

@@ -1,26 +1,28 @@
 <div class="jumbotron">
   <h2><%= @store.name %> Inventory</h2>
 </div>
-<h3><%= @store.name %> carries the following brands:</h3>
-<% if @store.brands.any? %>
+<div class="container">
+  <h3><%= @store.name %> carries the following brands:</h3>
+  <% if @store.brands.any? %>
   <ul>
     <% @store.brands.each() do |brand| %>
     <li><%= brand.name %></li>
     <% end %>
   </ul>
-<% else %>
+  <% else %>
   <p>Store does not have any brands yet.</p>
   <br>
   <p><a href="/brands">Add brands to database</a></p>
-<% end %>
-<h4>Assign a brand to this store:</h4>
-<form action="/stores/<%= @store.id %>" method="post">
-<input type="hidden" name="_method" value="patch">
-<label for="brand_choose">Choose Brands:</label>
-<br>
-  <% @brands.each() do |brand| %>
-  <input type="checkbox" name="brand_id[]" id ='brand_id[]' value="<%= brand.id %>"> <strong><%= brand.name %></strong><br>
   <% end %>
-  <br>
-  <button type="submit">Add Brands</button>
-</form>
+  <h4>Assign a brand to this store:</h4>
+  <form action="/stores/<%= @store.id %>" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <label for="brand_choose">Choose Brands:</label>
+    <br>
+    <% @brands.each() do |brand| %>
+    <input type="checkbox" name="brand_id[]" id ='brand_id[]' value="<%= brand.id %>"> <strong><%= brand.name %></strong><br>
+    <% end %>
+    <br>
+    <button type="submit">Add Brands</button>
+  </form>
+</div>

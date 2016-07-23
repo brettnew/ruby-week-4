@@ -22,5 +22,19 @@ body {
 
 h2 {
  font-family: 'Lato', sans-serif;
+ font-weight: 700;
+}
 
+.container {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+button {
+  background-color: #C7CAEB;
+  color: #04021A;
+  border: 2px white solid;
+  padding: 5px 15px 5px 15px;
+  margin: 30px 0px 0px 20px;
+  border-radius: 5px;
 }

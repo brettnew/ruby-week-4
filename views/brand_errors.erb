@@ -1,9 +1,10 @@
-<h3>Oops! Please fix these errors:</h3>
-<ul>
-  <% @brand.errors().full_messages().each() do |message| %>
+<div class="container">
+  <h3>Oops! Please fix these errors:</h3>
+  <ul>
+    <% @brand.errors().full_messages().each() do |message| %>
     <li><%= message %></li>
-  <% end %>
-</ul>
+    <% end %>
+  </ul>
 
-<h5><a href="/brands">Try Again</a></h5>
-<h5><a href="/" >Return to Main Page</a></h5>
+  <h5><a href="/brands">Try Again</a></h5>
+</div>
